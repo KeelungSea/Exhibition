@@ -1,13 +1,6 @@
-// === top.js ===
-
-// 🛡️ 安全守衛：檢查是否有登入蓋章，沒有就強制踢回登入頁
 if (sessionStorage.getItem('isNotebookLoggedIn') !== 'true') {
   window.location.href = "init.html";
 }
-
-// 💡 這裡原本的 const portalData = [...] 已經移到 data/top-data.js 裡了！
-// 接下來的引擎會直接使用 portalData 這個變數
-
 const listContainer = document.getElementById("exhibition-list");
 
 portalData.forEach(exhibition => {
@@ -40,7 +33,6 @@ portalData.forEach(exhibition => {
   listContainer.innerHTML += cardHTML;
 });
 
-// 綁定點擊展開事件
 const headers = document.querySelectorAll('.card-header');
 headers.forEach(header => {
   header.addEventListener('click', function() {

@@ -1,4 +1,3 @@
-// === init.js ===
 const TARGET_HASH = "922b53ea837e15ffe640f2e755e3d2f379fb34d103c8d69f99ec32025434f020";
 async function hashPassword(password) {
   const msgBuffer = new TextEncoder().encode(password);
@@ -19,13 +18,11 @@ async function handleLogin() {
   if (hashedInput === TARGET_HASH) {
     errorEl.textContent = "";
     
-    // 💡 關鍵：驗證成功，在當前分頁寫入登入憑證
     sessionStorage.setItem('isNotebookLoggedIn', 'true');
     
-    // 跳轉到首頁 (因為都在 html 資料夾，直接寫檔名)
     window.location.href = "top.html";
   } else {
-    errorEl.textContent = "ACCESS DENIED";
+    errorEl.textContent = "Now, say my name!";
     inputEl.value = "";
     inputEl.focus();
   }

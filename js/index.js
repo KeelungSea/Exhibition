@@ -1,8 +1,4 @@
-// === index.js ===
 
-// === index.js ===
-
-// 🛡️ 安全守衛：沒登入就踢走
 if (sessionStorage.getItem('isNotebookLoggedIn') !== 'true') {
   window.location.href = "init.html";
 }
@@ -16,21 +12,18 @@ if (!currentExhibitionId || !exhibitionDatabase[currentExhibitionId]) {
   const data = exhibitionDatabase[currentExhibitionId];
   document.body.classList.add(`theme-${currentExhibitionId}`);
 
-  // 📥 核心：初始化語言設定（記住使用者的選擇，預設為中文 zh）
   let currentLang = localStorage.getItem('selectedLang') || 'ja';
 
   function renderCatalog() {
-    // 根據當前語言抓取對應文字
     document.getElementById("page-title").innerText = data.title[currentLang];
     document.getElementById("page-subtitle").innerText = data.subtitle[currentLang];
 
     const catalogList = document.getElementById("catalog-list");
-    catalogList.innerHTML = ""; // 先清空舊介面
+    catalogList.innerHTML = "";
     
     let currentGroup = "";
 
     data.artworks.forEach((artwork, index) => {
-      // 讀取當前語言的分組名稱
       const groupName = artwork.group[currentLang];
       if (groupName !== currentGroup) {
         currentGroup = groupName;
@@ -53,7 +46,6 @@ if (!currentExhibitionId || !exhibitionDatabase[currentExhibitionId]) {
     });
   }
 
-  // 📥 語言切換按鈕控制
   function initLangSwitcher() {
     const btnZh = document.getElementById('lang-zh');
     const btnJa = document.getElementById('lang-ja');
@@ -82,10 +74,9 @@ if (!currentExhibitionId || !exhibitionDatabase[currentExhibitionId]) {
       renderCatalog();
     });
 
-    updateSwitcherUI(); // 初始載入時的高亮
+    updateSwitcherUI();
   }
 
-  // 執行
   initLangSwitcher();
   renderCatalog();
 }
