@@ -6,20 +6,19 @@
   --text-muted: #555555;
   --border-line: #1A1A1A;
 
-  /* 預設：北齋主題 (左圖右文，無框) */
-  --accent-color: #9263B9; /* 江戶紫 */
+
+  --accent-color: #9263B9; 
   --layout-direction: row; 
   --title-font: "Helvetica Neue", "Arial", sans-serif;
   --image-border: none;
   --image-shadow: 0 10px 40px rgba(0,0,0,0.8);
 }
 
-/* 🎨 梵谷展專屬主題 (左文右圖，帶有西洋畫框) */
 body.theme-gogh {
-  --accent-color: #F4D03F; /* 向日葵黃 */
-  --layout-direction: row-reverse; /* 反轉版面 */
-  --title-font: "Georgia", "Times New Roman", serif; /* 古典襯線字 */
-  --image-border: 12px solid #EAE6D7; /* 米白色裝裱框 */
+  --accent-color: #F4D03F;
+  --layout-direction: row-reverse; 
+  --title-font: "Georgia", "Times New Roman", serif; 
+  --image-border: 12px solid #EAE6D7; 
   --image-shadow: 5px 5px 25px rgba(0,0,0,0.9);
 }
 
@@ -69,7 +68,7 @@ footer { border-top: 1px solid var(--border-line); border-bottom: none; }
 }
 
 .lang-btn.active {
-  color: var(--accent-color); /* 選中時亮起專屬的主題色！ */
+  color: var(--accent-color);
   font-weight: bold;
 }
 
@@ -92,7 +91,7 @@ main {
   justify-content: center;
   align-items: center;
   padding: 40px;
-  background-color: #000000; /* 極致黑讓圖片跳出來 */
+  background-color: #000000; 
 }
 .image-section img {
   max-width: 100%; max-height: 80vh;
@@ -135,15 +134,15 @@ main {
   content: "—"; position: absolute; left: 0; color: var(--accent-color); font-weight: bold;
 }
 
-/* 導航按鈕 */
+
 .btn-nav, .btn-index {
   color: var(--text-muted); text-decoration: none; font-size: 0.85rem;
   letter-spacing: 2px; font-weight: bold; transition: color 0.3s;
 }
 .btn-nav:hover, .btn-index:hover { color: var(--accent-color); }
-.btn-nav.disabled { opacity: 0.2; pointer-events: none; } /* 當沒有上一頁/下一頁時變暗 */
+.btn-nav.disabled { opacity: 0.2; pointer-events: none; } 
 
-/* 手機版 (單欄排列) */
+
 @media (max-width: 768px) {
   body { height: auto; }
   main { flex-direction: column !important; overflow: visible; }

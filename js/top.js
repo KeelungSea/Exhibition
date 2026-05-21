@@ -17,15 +17,15 @@ portalData.forEach(exhibition => {
       <div class="card-details-wrapper">
         <div class="card-details-inner">
           <div class="info-grid">
-            <div class="info-item"><span>展期 Dates</span>${exhibition.date}</div>
-            <div class="info-item"><span>地點 Venue</span>${exhibition.location}</div>
-            <div class="info-item"><span>門票 Tickets</span>${exhibition.price}</div>
+            <div class="info-item"><span>Dates</span>${exhibition.date}</div>
+            <div class="info-item"><span>Venue</span>${exhibition.location}</div>
+            <div class="info-item"><span>Tickets</span>${exhibition.price}</div>
           </div>
           <div class="highlights">
-            <h3>展覽看點 Highlights</h3>
+            <h3>Highlights</h3>
             <ul>${highlightsHTML}</ul>
           </div>
-          <a href="index.html?exhibition=${exhibition.id}" class="btn-enter">進入展覽目錄 →</a>
+          <a href="index.html?exhibition=${exhibition.id}" class="btn-enter">ENTER INDEX</a>
         </div>
       </div>
     </div>

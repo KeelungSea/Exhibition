@@ -1,35 +1,32 @@
-/* === 1. 現代美學變數設定 === */
 :root {
-  --bg-dark: #050505; /* 極致深黑，比原本的灰色更大膽 */
-  --text-main: #FFFFFF; /* 純白高對比 */
-  --text-muted: #666666; /* 降低存在感，拉開層次 */
-  --accent-purple: #9263B9; /* 現代螢幕顯色版：江戶紫 */
+  --bg-dark: #050505;
+  --text-main: #FFFFFF;
+  --text-muted: #666666;
+  --accent-purple: #9263B9;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  /* 使用無襯線體，帶來俐落、現代的科技/藝廊感 */
-  font-family: "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-family:  "Hiragino Kaku Gothic ProN", sans-serif;  /*"Helvetica Neue", "Arial",*/
   background-color: var(--bg-dark);
   color: var(--text-main);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  -webkit-font-smoothing: antialiased; /* 讓字體邊緣在深色背景更銳利 */
+  -webkit-font-smoothing: antialiased;
 }
 
-/* === 2. 頂部標題：大膽排版 (Typography) === */
 .top-header {
   text-align: center;
-  margin: 100px 20px 80px; /* 增加留白空間 */
+  margin: 100px 20px 80px;
 }
 
 .top-header h1 {
-  font-size: clamp(2.5rem, 6vw, 5rem); /* 字體極大化，且隨螢幕縮放 */
+  font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 900;
-  letter-spacing: -2px; /* 緊湊的字距，現代感指標 */
+  letter-spacing: -2px;
   line-height: 1;
   margin-bottom: 15px;
   text-transform: uppercase;
@@ -43,36 +40,31 @@ body {
   text-transform: uppercase;
 }
 
-/* === 3. 展覽清單：無框線、滿版橫線設計 (Editorial List) === */
 .gallery-container {
   width: 100%;
-  max-width: 1000px; /* 放寬容器，讓畫面更大氣 */
+  max-width: 1000px;
   padding: 0 20px;
   margin-bottom: 100px;
 }
 
 .exhibition-card {
-  /* 移除原本的背景色與外框，改用純粹的底線區隔 */
   background-color: transparent;
   border-bottom: 1px solid #222222;
   border-radius: 0;
   transition: all 0.4s ease;
 }
 
-/* Hover 時的微妙光影變化 */
 .exhibition-card:hover {
   border-bottom-color: var(--accent-purple);
 }
 
-/* === 4. 卡片標題區 (點擊觸發) === */
 .card-header {
-  padding: 40px 0; /* 捨棄左右 padding，與容器貼齊 */
+  padding: 40px 0;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  /* 加入隱形的江戶紫漸層背景，Hover時微微浮現 */
   background: linear-gradient(90deg, rgba(146, 99, 185, 0.05) 0%, transparent 100%);
   background-size: 200% 100%;
   background-position: 100% 0;
@@ -84,7 +76,7 @@ body {
 }
 
 .card-title-group h2 {
-  font-size: clamp(1.8rem, 4vw, 3rem); /* 展覽標題大字排版 */
+  font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 700;
   letter-spacing: -1px;
   margin-bottom: 8px;
@@ -93,7 +85,7 @@ body {
 
 .exhibition-card:hover .card-title-group h2 {
   color: var(--accent-purple);
-  transform: translateX(10px); /* 現代化的微動效：向右微微滑動 */
+  transform: translateX(10px);
 }
 
 .card-title-group .subtitle {
@@ -119,12 +111,12 @@ body {
   color: var(--accent-purple);
 }
 
-/* === 5. 展開詳細資訊區：極簡網格 === */
 .card-details-wrapper {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .exhibition-card.active .card-details-wrapper {
   grid-template-rows: 1fr;
 }
@@ -133,11 +125,11 @@ body {
   overflow: hidden;
   padding: 0;
 }
+
 .exhibition-card.active .card-details-inner {
   padding: 10px 0 50px 0;
 }
 
-/* 資料區排版 */
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -160,7 +152,6 @@ body {
   margin-bottom: 8px;
 }
 
-/* 看點清單 */
 .highlights {
   margin-bottom: 40px;
 }
@@ -186,7 +177,6 @@ body {
   font-weight: 300;
 }
 
-/* 使用俐落的短橫線取代傳統圓點 */
 .highlights li::before {
   content: "—";
   color: var(--accent-purple);
@@ -195,7 +185,6 @@ body {
   left: 0;
 }
 
-/* === 6. 現代化藥丸型按鈕 (Pill Button) === */
 .btn-enter {
   display: inline-flex;
   align-items: center;
@@ -208,22 +197,17 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 50px; /* 俐落的藥丸形狀 */
+  border-radius: 50px;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-enter:hover {
   background: var(--accent-purple);
   border-color: var(--accent-purple);
-  padding-right: 46px; /* 視覺上產生按鈕被「拉長」的動感 */
+  padding-right: 46px;
   padding-left: 26px;
 }
 
-/* ========================================= */
-/* === 新增：密碼鎖定畫面樣式與開關 === */
-/* ========================================= */
-
-/* 當 body 有 locked 標籤時，隱藏標題與清單 */
 body.locked .top-header,
 body.locked .gallery-container {
   display: none;
@@ -233,7 +217,7 @@ body.locked .gallery-container {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* 使用 100% 避免出現橫向捲軸 */
+  width: 100%;
   height: 100vh;
   background-color: var(--bg-dark);
   display: flex;
@@ -287,7 +271,7 @@ body.locked .gallery-container {
   letter-spacing: 2px;
   outline: none;
   text-align: center;
-  font-family: monospace; 
+  font-family: monospace;
 }
 
 .input-group input::placeholder {
@@ -311,10 +295,10 @@ body.locked .gallery-container {
 }
 
 .auth-error {
-  color: #D64541; 
+  color: #D64541;
   font-size: 0.8rem;
   letter-spacing: 2px;
   margin-top: 20px;
-  height: 20px; 
+  height: 20px;
   text-transform: uppercase;
 }

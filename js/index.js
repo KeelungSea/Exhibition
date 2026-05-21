@@ -30,7 +30,7 @@ if (!currentExhibitionId || !exhibitionDatabase[currentExhibitionId]) {
         catalogList.innerHTML += `<div class="group-title">${currentGroup}</div>`;
       }
 
-      const displayNum = String(index + 1).padStart(2, '0');
+      const displayNum = String(index).padStart(2, '0');
 
       const rowHTML = `
         <a href="detail.html?exhibition=${currentExhibitionId}&id=${artwork.id}" class="artwork-row">

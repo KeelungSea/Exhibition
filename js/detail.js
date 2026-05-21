@@ -33,7 +33,7 @@ if (!exhibitionId) {
         document.getElementById("artwork-meta").innerText = artwork.meta[currentLang];
         document.getElementById("artwork-img").src = artwork.imageUrl;
 
-        const displayNum = String(artworkId + 1).padStart(2, '0');
+        const displayNum = String(artworkId).padStart(2, '0');
         document.getElementById("progress-tracker").innerText = `${displayNum} / ${exhibitionData.length}`;
 
         const tagsContainer = document.getElementById("tags-container");
