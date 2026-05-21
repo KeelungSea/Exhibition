@@ -1,0 +1,101 @@
+:root {
+  --bg-dark: #050505;
+  --text-main: #FFFFFF;
+  --text-muted: #666666;
+  --accent-purple: #9263B9;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+.auth-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-box {
+  text-align: center;
+  width: 100%;
+  max-width: 360px;
+  padding: 40px 20px;
+}
+
+.auth-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.auth-subtitle {
+  font-size: 0.75rem;
+  color: var(--accent-purple);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.input-group {
+  display: flex;
+  border-bottom: 1px solid #333;
+  transition: border-color 0.4s ease;
+  padding-bottom: 5px;
+}
+
+.input-group:focus-within {
+  border-bottom-color: var(--accent-purple);
+}
+
+.input-group input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  outline: none;
+  text-align: center;
+  font-family: monospace; 
+}
+
+.input-group input::placeholder {
+  color: #333;
+  letter-spacing: 4px;
+}
+
+.input-group button {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.input-group button:hover {
+  color: var(--accent-purple);
+  transform: translateX(4px);
+}
+
+.auth-error {
+  color: #D64541; 
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  height: 20px; 
+  text-transform: uppercase;
+}

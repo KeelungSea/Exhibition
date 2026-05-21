@@ -1,0 +1,188 @@
+/* === 1. 核心變數與主題擴展區 === */
+:root {
+  --bg-dark: #050505;
+  --text-main: #FFFFFF;
+  --text-muted: #555555;
+  --text-sub: #999999;
+  --border-line: #1A1A1A;
+
+  /* 預設點綴色：葛飾北齋的江戶紫 */
+  --accent-color: #9263B9;
+  --accent-rgb: 146, 99, 185;
+}
+
+/* 🎨 梵谷展專屬主題 */
+body.theme-gogh {
+  --accent-color: #F4D03F;
+  --accent-rgb: 244, 208, 63;
+}
+
+/* 🎨 未來擴充：莫內展 */
+body.theme-monet {
+  --accent-color: #82E0AA;
+  --accent-rgb: 130, 224, 170;
+}
+
+/* ========================================= */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  transition: all 0.5s ease;
+}
+
+/* === 2. 頂部標題區 === */
+.catalog-header {
+  padding: 60px 40px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ⭐ 修正核心：讓返回鍵與語言切換完美水平對齊 */
+.header-utility {
+  display: flex;
+  justify-content: space-between; /* 左右撐開 */
+  align-items: center; /* 垂直置中 */
+  margin-bottom: 40px; /* 統一在這裡設定與下方標題的距離 */
+}
+
+/* 返回按鈕 */
+.btn-back {
+  display: inline-block;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  margin: 0; /* 確保清空以前殘留的 margin */
+}
+.btn-back:hover { color: var(--accent-color); }
+
+/* 語言切換器 */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  font-family: monospace;
+}
+
+.lang-btn {
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.lang-btn:hover { color: var(--text-main); }
+.lang-btn.active {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.lang-divider {
+  color: var(--border-line);
+}
+
+/* 大標題排版 */
+.catalog-header h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.catalog-header p {
+  font-size: 1rem;
+  color: var(--accent-color);
+  letter-spacing: 2px;
+}
+
+/* === 3. 目錄清單區 === */
+.catalog-container {
+  max-width: 1000px;
+  margin: 0 auto 100px;
+  padding: 0 40px;
+}
+
+.group-title {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--text-muted);
+  padding-bottom: 10px;
+  margin: 60px 0 20px 0;
+}
+
+.artwork-row {
+  display: flex;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid var(--border-line);
+  text-decoration: none;
+  color: var(--text-main);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.artwork-row:hover {
+  border-bottom-color: var(--accent-color);
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.05) 0%, transparent 50%);
+}
+
+.artwork-number {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  width: 50px;
+  font-family: monospace;
+}
+
+.artwork-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.artwork-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+.artwork-row:hover .artwork-title {
+  color: var(--accent-color);
+  transform: translateX(10px);
+}
+
+.artwork-meta {
+  font-size: 0.85rem;
+  color: var(--text-sub);
+  font-weight: 300;
+  transition: transform 0.4s ease;
+}
+.artwork-row:hover .artwork-meta {
+  transform: translateX(10px);
+}
+
+.artwork-arrow {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+.artwork-row:hover .artwork-arrow {
+  color: var(--accent-color);
+  transform: translateX(5px);
+}
+
+@media (max-width: 600px) {
+  .catalog-header, .catalog-container { padding: 40px 20px; }
+  .artwork-title { font-size: 1.2rem; }
+}

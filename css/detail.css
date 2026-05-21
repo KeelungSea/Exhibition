@@ -1,0 +1,154 @@
+/* === detail.css === */
+:root {
+  --bg-dark: #050505;
+  --bg-panel: #0A0A0A;
+  --text-main: #FFFFFF;
+  --text-muted: #555555;
+  --border-line: #1A1A1A;
+
+  /* 預設：北齋主題 (左圖右文，無框) */
+  --accent-color: #9263B9; /* 江戶紫 */
+  --layout-direction: row; 
+  --title-font: "Helvetica Neue", "Arial", sans-serif;
+  --image-border: none;
+  --image-shadow: 0 10px 40px rgba(0,0,0,0.8);
+}
+
+/* 🎨 梵谷展專屬主題 (左文右圖，帶有西洋畫框) */
+body.theme-gogh {
+  --accent-color: #F4D03F; /* 向日葵黃 */
+  --layout-direction: row-reverse; /* 反轉版面 */
+  --title-font: "Georgia", "Times New Roman", serif; /* 古典襯線字 */
+  --image-border: 12px solid #EAE6D7; /* 米白色裝裱框 */
+  --image-shadow: 5px 5px 25px rgba(0,0,0,0.9);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.5s ease;
+}
+
+/* === Header & Footer === */
+header, footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: var(--bg-dark);
+  border-bottom: 1px solid var(--border-line);
+}
+footer { border-top: 1px solid var(--border-line); border-bottom: none; }
+
+.group-title { font-size: 0.85rem; letter-spacing: 4px; color: var(--text-muted); text-transform: uppercase; }
+.progress-tracker { font-size: 1rem; font-family: monospace; color: var(--accent-color); }
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  font-family: monospace;
+}
+
+.lang-btn {
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.lang-btn:hover {
+  color: var(--text-main);
+}
+
+.lang-btn.active {
+  color: var(--accent-color); /* 選中時亮起專屬的主題色！ */
+  font-weight: bold;
+}
+
+.lang-divider {
+  color: var(--border-line);
+}
+
+
+/* === Main Stage === */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: var(--layout-direction);
+  overflow: hidden;
+}
+
+.image-section {
+  flex: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #000000; /* 極致黑讓圖片跳出來 */
+}
+.image-section img {
+  max-width: 100%; max-height: 80vh;
+  object-fit: contain;
+  border: var(--image-border);
+  box-shadow: var(--image-shadow);
+  border-radius: 2px;
+}
+
+.info-section {
+  flex: 4; padding: 60px;
+  background-color: var(--bg-panel);
+  overflow-y: auto; display: flex; flex-direction: column; justify-content: center;
+}
+
+/* 文字排版 */
+.tags { margin-bottom: 20px; }
+.tag {
+  border: 1px solid var(--accent-color); color: var(--accent-color);
+  padding: 6px 14px; border-radius: 50px; font-size: 0.75rem; margin-right: 10px;
+  letter-spacing: 1px;
+}
+
+.artwork-title {
+  font-family: var(--title-font);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700; margin-bottom: 10px; line-height: 1.1; letter-spacing: -1px;
+}
+.artwork-meta {
+  color: var(--text-muted); font-size: 0.9rem; margin-bottom: 40px;
+  padding-bottom: 20px; border-bottom: 1px solid var(--border-line);
+}
+
+.highlights { list-style-type: none; }
+.highlights li {
+  position: relative; padding-left: 20px; margin-bottom: 15px;
+  line-height: 1.8; font-size: 1.05rem; font-weight: 300;
+}
+.highlights li::before {
+  content: "—"; position: absolute; left: 0; color: var(--accent-color); font-weight: bold;
+}
+
+/* 導航按鈕 */
+.btn-nav, .btn-index {
+  color: var(--text-muted); text-decoration: none; font-size: 0.85rem;
+  letter-spacing: 2px; font-weight: bold; transition: color 0.3s;
+}
+.btn-nav:hover, .btn-index:hover { color: var(--accent-color); }
+.btn-nav.disabled { opacity: 0.2; pointer-events: none; } /* 當沒有上一頁/下一頁時變暗 */
+
+/* 手機版 (單欄排列) */
+@media (max-width: 768px) {
+  body { height: auto; }
+  main { flex-direction: column !important; overflow: visible; }
+  .image-section { padding: 20px; }
+  .image-section img { max-height: 50vh; }
+  .info-section { padding: 40px 20px; }
+  header, footer { padding: 20px; }
+}
