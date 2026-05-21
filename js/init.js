@@ -1,6 +1,5 @@
 // === init.js ===
-//const TARGET_HASH = "677a7a7bb291f4f096f60fa004203c3b0e10a7281d7a4157749df0de86528f4f"; 
-const TARGET_HASH = "4d99d50b8706b8cb5380528adee94ccb94ce30d696ce504170a2818106c53ad8";
+const TARGET_HASH = "922b53ea837e15ffe640f2e755e3d2f379fb34d103c8d69f99ec32025434f020";
 async function hashPassword(password) {
   const msgBuffer = new TextEncoder().encode(password);
   const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
