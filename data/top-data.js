@@ -1,6 +1,7 @@
 // === top-data.js ===
 
 const portalData = [
+// note: copy from here to create new exhibition data, and update index-data.js accordingly
 {
   id: "hokusai",
   title: "HOKUSAI: Thirty-six Views of Mt. Fuji",
@@ -11,12 +12,14 @@ const portalData = [
   highlights: [
     "2024年に国立西洋美術館へ寄託された井内コレクション『冨嶽三十六景』を初公開",
     "シリーズ全46図を一挙展示し、「神奈川沖浪裏」と希少な“青富士”も追加展示",
-    "作品を版下絵の制作順に沿った6つのグループで構成し、北斎の創作過程を辿れる展示",
     "一部作品は表裏両面から鑑賞可能で、江戸時代の浮世絵の楽しみ方を追体験できる",
-    "北斎がモネやドガなど西洋美術へ与えた影響にも注目"
+    "北斎がモネやドガなど西洋美術へ与えた影響にも注目",
+    "作品リスト：https://www.nmwa.go.jp/jp/exhibitions/pdf/2026ciurlionis_hokusai_list.pdf"
   ]
 },
-  {
+// here !!
+
+ {
     id: "gogh",
     title: "VAN GOGH: Café, le soir",
     subtitle: "大ゴッホ展 夜のカフェテラス",
@@ -27,7 +30,8 @@ const portalData = [
       "クレラー＝ミュラー美術館のコレクションから、《夜のカフェテラス》をはじめとする約60点の作品!",
       "モネやルノワールなど、ファン・ゴッホと同時代に活躍した画家たちの作品も見える",
       "オランダ時代からパリ時代を経てアルルに至るまでの画業前半を辿る展示構成",
-      "苦難の連続のなかで困難に立ち向かい、芸術に癒しと安らぎを見出した画家の人生に迫る"
+      "苦難の連続のなかで困難に立ち向かい、芸術に癒しと安らぎを見出した画家の人生に迫る",
+      "作品リスト：https://grand-van-gogh-tokyo.com/assets/pdf/artwork-list.pdf"
     ]
   }
 ];

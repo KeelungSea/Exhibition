@@ -34,7 +34,7 @@ if (!exhibitionId) {
         document.getElementById("artwork-img").src = artwork.imageUrl;
 
         const displayNum = String(artworkId).padStart(2, '0');
-        document.getElementById("progress-tracker").innerText = `${displayNum} / ${exhibitionData.length}`;
+        document.getElementById("progress-tracker").innerText = `${displayNum} / ${exhibitionData.length-1}`;
 
         const tagsContainer = document.getElementById("tags-container");
         tagsContainer.innerHTML = "";
