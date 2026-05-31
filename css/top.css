@@ -76,11 +76,17 @@ body {
 }
 
 .card-title-group h2 {
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 700;
   letter-spacing: -1px;
   margin-bottom: 8px;
   transition: color 0.4s ease, transform 0.4s ease;
+  word-break: break-word;
+  text-wrap: balance;
+}
+
+.card-title-group h2.long-title {
+  font-size: clamp(1.3rem, 2.8vw, 1.8rem); 
 }
 
 .exhibition-card:hover .card-title-group h2 {
@@ -301,4 +307,7 @@ body.locked .gallery-container {
   margin-top: 20px;
   height: 20px;
   text-transform: uppercase;
+}
+a{
+  color:#FF63B4;
 }

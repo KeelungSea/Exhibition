@@ -5,11 +5,12 @@ const listContainer = document.getElementById("exhibition-list");
 
 portalData.forEach(exhibition => {
   const highlightsHTML = exhibition.highlights.map(point => `<li>${point}</li>`).join('');
+  const titleClass = exhibition.title.length > 40 ? 'long-title' : '';
   const cardHTML = `
     <div class="exhibition-card">
       <div class="card-header">
         <div class="card-title-group">
-          <h2>${exhibition.title}</h2>
+          <h2 class="${titleClass}">${exhibition.title}</h2>
           <div class="subtitle">${exhibition.subtitle}</div>
         </div>
         <div class="toggle-icon">▼</div>
