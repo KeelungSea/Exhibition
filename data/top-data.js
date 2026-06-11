@@ -3,6 +3,40 @@
 const portalData = [
 // note: copy from here to create new exhibition data, and update index-data.js accordingly
 {
+  id: "hokusai",
+  title: "HOKUSAI: Thirty-six Views of Mt. Fuji",
+  subtitle: "北斎　冨嶽三十六景　井内コレクションより",
+  date: "2026/03/28(Sat)－06/14(Sun)",
+  location: "国立西洋美術館 (東京)",
+  price: "¥2,200",
+  highlights: [
+    "ホームページ：<a href = 'https://www.nmwa.go.jp/jp/exhibitions/2026hokusai.html'>北斎　富嶽三十六景</a>",
+    "2024年に国立西洋美術館へ寄託された井内コレクション『冨嶽三十六景』を初公開",
+    "シリーズ全46図を一挙展示し、「神奈川沖浪裏」と希少な“青富士”も追加展示",
+    "一部作品は表裏両面から鑑賞可能で、江戸時代の浮世絵の楽しみ方を追体験できる",
+    "北斎がモネやドガなど西洋美術へ与えた影響にも注目",
+    "作品リスト：<a href = 'https://www.nmwa.go.jp/jp/exhibitions/pdf/2026ciurlionis_hokusai_list.pdf'>北斎　富嶽三十六景　展示リスト</a>"
+  ]
+},
+// here !!
+
+ {
+    id: "gogh",
+    title: "VAN GOGH: Café, le soir",
+    subtitle: "大ゴッホ展 夜のカフェテラス",
+    date: "2026/05/29(Fri)－08/12(Wed)",
+    location: "上野の森美術館 (東京)",
+    price: "¥3,000", 
+    highlights: [
+      "ホームページ：<a href = 'https://grand-van-gogh.com/'>大ゴッホ展　夜のカフェテラス</a>",
+      "クレラー＝ミュラー美術館のコレクションから、《夜のカフェテラス》をはじめとする約60点の作品!",
+      "モネやルノワールなど、ファン・ゴッホと同時代に活躍した画家たちの作品も見える",
+      "オランダ時代からパリ時代を経てアルルに至るまでの画業前半を辿る展示構成",
+      "苦難の連続のなかで困難に立ち向かい、芸術に癒しと安らぎを見出した画家の人生に迫る",
+      "作品リスト：<a href = 'https://grand-van-gogh-tokyo.com/assets/pdf/artwork-list.pdf'>大ゴッホ展　夜のカフェテラス　展示リスト</a>"
+    ]
+},
+{
   id: "Palace100",
   title: "Enduring Legacy: <br>A Centennial Celebration of the National Palace Museum",
   subtitle: "甲子萬年：國立故宮博物院百年院慶特展",
@@ -46,39 +80,5 @@ const portalData = [
     "第二單元「舒心暢意」迎來世紀神品，驚豔展出蘇軾〈前赤壁賦〉、黃庭堅〈松風閣詩〉、米芾〈蜀素帖〉及李公麟稀世真蹟〈五馬圖〉，體現北宋「尚意」書風與文人畫最高成就",
     "第三單元「百代典範」精選後代文人的臨仿之作，深刻證成這群文化巨擘跨越千年的深遠影響力與不朽傳奇"
   ]
-},
-{
-  id: "hokusai",
-  title: "HOKUSAI: Thirty-six Views of Mt. Fuji",
-  subtitle: "北斎　冨嶽三十六景　井内コレクションより",
-  date: "2026/03/28(Sat)－06/14(Sun)",
-  location: "国立西洋美術館 (東京)",
-  price: "¥2,200",
-  highlights: [
-    "ホームページ：<a href = 'https://www.nmwa.go.jp/jp/exhibitions/2026hokusai.html'>北斎　富嶽三十六景</a>",
-    "2024年に国立西洋美術館へ寄託された井内コレクション『冨嶽三十六景』を初公開",
-    "シリーズ全46図を一挙展示し、「神奈川沖浪裏」と希少な“青富士”も追加展示",
-    "一部作品は表裏両面から鑑賞可能で、江戸時代の浮世絵の楽しみ方を追体験できる",
-    "北斎がモネやドガなど西洋美術へ与えた影響にも注目",
-    "作品リスト：<a href = 'https://www.nmwa.go.jp/jp/exhibitions/pdf/2026ciurlionis_hokusai_list.pdf'>北斎　富嶽三十六景　展示リスト</a>"
-  ]
-},
-// here !!
-
- {
-    id: "gogh",
-    title: "VAN GOGH: Café, le soir",
-    subtitle: "大ゴッホ展 夜のカフェテラス",
-    date: "2026/05/29(Fri)－08/12(Wed)",
-    location: "上野の森美術館 (東京)",
-    price: "¥3,000", 
-    highlights: [
-      "ホームページ：<a href = 'https://grand-van-gogh.com/'>大ゴッホ展　夜のカフェテラス</a>",
-      "クレラー＝ミュラー美術館のコレクションから、《夜のカフェテラス》をはじめとする約60点の作品!",
-      "モネやルノワールなど、ファン・ゴッホと同時代に活躍した画家たちの作品も見える",
-      "オランダ時代からパリ時代を経てアルルに至るまでの画業前半を辿る展示構成",
-      "苦難の連続のなかで困難に立ち向かい、芸術に癒しと安らぎを見出した画家の人生に迫る",
-      "作品リスト：<a href = 'https://grand-van-gogh-tokyo.com/assets/pdf/artwork-list.pdf'>大ゴッホ展　夜のカフェテラス　展示リスト</a>"
-    ]
-  }
+}
 ];
