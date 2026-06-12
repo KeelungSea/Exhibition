@@ -3,6 +3,22 @@
 const portalData = [
 // note: copy from here to create new exhibition data, and update index-data.js accordingly
 {
+  "id": "tibetan-dragon-canon",
+  "title": "《龍藏經》：皇權・信仰・藝術的盛世交響",
+  "subtitle": "國立故宮博物院 特展",
+  "date": "2026/05/09(Sat)－11/08(Sun)",
+  "location": "國立故宮博物院 北部院區 103、104陳列室 (台北)",
+  "price": "NT$350",
+  "highlights": [
+    "官方網站：<a href='https://theme.npm.edu.tw/TibetanDragonCanon/'>《龍藏經》：皇權・信仰・藝術的盛世交響</a>",
+    "展出康熙六年（1667年）在太皇太后孝莊文皇后與康熙皇帝推動下修造的泥金寫本藏文《甘珠爾》（即《龍藏經》）",
+    "首度於故宮北院將《龍藏經》結合其全套裝幀配件完整呈現",
+    "結合近年檢測分析與比對研究，將視角提升至「總體藝術品」高度，層層解構這部曠世經典",
+    "呈現從磁青紙上的泥金經文、繪有壇城的護經板，到黃緞織花經衣及五色經簾等清初宮廷工藝的極致展現",
+    "並陳明代內府御製經典、清代《諸品積咒經》、《乾隆甘珠爾》及滿文藏經，展現皇室信仰在不同朝代與語文間的流轉與傳承"
+  ]
+},
+{
   id: "hokusai",
   title: "HOKUSAI: Thirty-six Views of Mt. Fuji",
   subtitle: "北斎　冨嶽三十六景　井内コレクションより",
